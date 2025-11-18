@@ -9,7 +9,7 @@ class Solution {
             }
         }
         StringBuilder sb=new StringBuilder();
-        for(char c: st)
+        for(char c: st)  //Iterate through the characters stored in the stack and append them to the StringBuilder
         sb.append(c);
         return sb.toString();
     }
