@@ -1,0 +1,1 @@
+<h2>n-queens Notes</h2><hr>[ Time taken: 15 d 18 hrs 39 m 2 s ]
