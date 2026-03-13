@@ -23,7 +23,7 @@ class Solution {
        
         ListNode preNode = null;
 
-        for (int i = 0; i <= right - left; i++) {
+        for (int i = 1; i <= right - left+1; i++) {
             ListNode nextNode = currNode.next;
             currNode.next = preNode;
             preNode = currNode;
