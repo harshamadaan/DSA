@@ -23,7 +23,7 @@ class Solution {
         int carry=0;
         ListNode head=null;
         while(!s1.isEmpty() ||!s2.isEmpty() || carry!=0){
-            int sum=carry;
+            int sum=carry; // sum=0 daal do
             if(!s1.isEmpty())
             sum+=s1.pop();
             if(!s2.isEmpty())
@@ -32,9 +32,12 @@ class Solution {
             node.next=head;
             head=node;
 
+
             carry=sum/10;
+           
 
         }
+        
         return head;
 
         
