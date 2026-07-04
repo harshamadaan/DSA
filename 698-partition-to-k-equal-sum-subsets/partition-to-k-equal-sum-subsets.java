@@ -33,8 +33,8 @@ class Solution {
 
             }
             subset[i]-=nums[idx];   //nhi to hta do glt position h
-            if(subset[i]==0)
-            break; 
+            // if(subset[i]==0)
+            // break; 
         }
         return false;
 
