@@ -1,7 +1,9 @@
 class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
         int n=nums.length;
-        int [] ans=new int[n-k+1];
+        int [] ans=new int[n-k+1];  //n - k + 1 ensures the output array has exactly one entry for each valid sliding window.
+
+//Each entry stores the maximum of that window.
         int i=0,j=0;
         Deque<Integer> deque=new LinkedList<>();
         while(j<n){
