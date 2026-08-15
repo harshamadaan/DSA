@@ -2,20 +2,39 @@
  * @param {Function} fn
  * @return {Function}
  */
+// function memoize(fn) {
+//     let cache={};
+    
+//     return function(...args) {
+//         // let n=args[0]  ek hi arg
+//         let n=JSON.stringify(args)
+
+//         if(n in cache){
+//             return cache[n];
+//         }else{
+//             // let result=fn(n)
+//             let result=fn.apply(this, args);
+//             cache[n]=result;
+//             return result;
+//         }
+        
+//     }
+// }
+
+// map
 function memoize(fn) {
-    let cache={};
+    let map=new Map();
     
     return function(...args) {
         // let n=args[0]  ek hi arg
-        let n=JSON.stringify(args)
+        let key=JSON.stringify(args)
 
-        if(n in cache){
-            return cache[n];
+        if(map.has(key)){
+            return map.get(key);
         }else{
-            // let result=fn(n)
-            let result=fn.apply(this, args);
-            cache[n]=result;
-            return result;
+            let value=fn(...args);
+            map.set(key,value);
+            return value;
         }
         
     }
